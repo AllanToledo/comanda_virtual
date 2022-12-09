@@ -1,7 +1,6 @@
 # ComandaVirtual
 
-This project can be used as a starting point to create your own Vaadin application with Spring Boot.
-It contains all the necessary configuration and some placeholder files to get you started.
+Talvez precise rodar o `npm install` pois está sem a pasta node_modules, os arquivos do SQL estão na pasta sql, eu fiz o um dump do banco mas caso tenha algum problema eu exportei tbm os arquivos para gerar cada tabela individualmente.
 
 ## Running the application
 
