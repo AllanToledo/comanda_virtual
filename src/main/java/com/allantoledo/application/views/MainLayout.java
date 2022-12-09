@@ -3,7 +3,12 @@ package com.allantoledo.application.views;
 
 import com.allantoledo.application.components.appnav.AppNav;
 import com.allantoledo.application.components.appnav.AppNavItem;
-import com.allantoledo.application.views.helloworld.HelloWorldView;
+import com.allantoledo.application.views.categoria.CategoriaProdutoView;
+import com.allantoledo.application.views.inicio.MesasView;
+import com.allantoledo.application.views.mesa.MesaView;
+import com.allantoledo.application.views.pagamento.FormaPagamentoView;
+import com.allantoledo.application.views.produto.ProdutosView;
+import com.allantoledo.application.views.relatorio.RelatorioView;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.html.Footer;
@@ -38,7 +43,7 @@ public class MainLayout extends AppLayout {
     }
 
     private void addDrawerContent() {
-        H1 appName = new H1("ComandaVirtual");
+        H1 appName = new H1("Comanda Virtual");
         appName.addClassNames(LumoUtility.FontSize.LARGE, LumoUtility.Margin.NONE);
         Header header = new Header(appName);
 
@@ -52,8 +57,12 @@ public class MainLayout extends AppLayout {
         // For documentation, visit https://github.com/vaadin/vcf-nav#readme
         AppNav nav = new AppNav();
 
-        nav.addItem(new AppNavItem("Hello World", HelloWorldView.class, "la la-globe"));
-
+        nav.addItem(new AppNavItem("Mesas", MesasView.class, "la la-globe"));
+        nav.addItem(new AppNavItem("Categorias", CategoriaProdutoView.class, "la la-globe"));
+        nav.addItem(new AppNavItem("Produtos", ProdutosView.class, "la la-globe"));
+        nav.addItem(new AppNavItem("Config. Mesa", MesaView.class, "la la-globe"));
+        nav.addItem(new AppNavItem("Formas de Pagamento", FormaPagamentoView.class, "la la-globe"));
+        nav.addItem(new AppNavItem("Relatórios", RelatorioView.class, "la la-globe"));
         return nav;
     }
 
